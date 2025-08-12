@@ -47,6 +47,7 @@ public class DisplaySettings extends DashboardFragment {
     private static final String TAG = "DisplaySettings";
 
     private static final String KEY_HIGH_TOUCH_POLLING_RATE = "high_touch_polling_rate_enable";
+    private static final String KEY_ONE_PULSE_MODE = "one_pulse_mode_enable";
     private static final String KEY_HIGH_TOUCH_SENSITIVITY = "high_touch_sensitivity_enable";
     private static final String KEY_PROXIMITY_ON_WAKE = "proximity_on_wake";
 
@@ -107,6 +108,10 @@ public class DisplaySettings extends DashboardFragment {
                     if (!hardware.isSupported(
                             LineageHardwareManager.FEATURE_HIGH_TOUCH_SENSITIVITY)) {
                         keys.add(KEY_HIGH_TOUCH_SENSITIVITY);
+                    }
+                    if (!hardware.isSupported(
+                            LineageHardwareManager.FEATURE_ONE_PULSE_MODE)) {
+                        keys.add(KEY_ONE_PULSE_MODE);
                     }
                     if (!context.getResources().getBoolean(
                             org.lineageos.platform.internal.R.bool.config_proximityCheckOnWake)) {

@@ -255,6 +255,13 @@
             android:defaultValue="false"
             settings:requiresFeature="lineagehardware:FEATURE_HIGH_TOUCH_SENSITIVITY" />
 
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="one_pulse_mode_enable"
+            android:title="@string/one_pulse_mode_title"
+            android:summary="@string/one_pulse_mode_summary"
+            android:defaultValue="false"
+            settings:requiresFeature="lineagehardware:FEATURE_ONE_PULSE_MODE" />
+
         <ListPreference
             android:key="theme"
             android:title="@string/device_theme"
